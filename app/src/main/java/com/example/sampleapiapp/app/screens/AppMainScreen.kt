@@ -7,15 +7,16 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.example.sampleapiapp.app.navigation.BottomBar
 import com.example.sampleapiapp.app.ui.theme.AppTheme
 
 @Composable
-fun AppMainScreen() {
+fun AppMainScreen(navController: NavHostController) {
     AppTheme {
         Scaffold(bottomBar = {
-            BottomAppBar() {
-
-            }
+            BottomBar(navController)
         },
             topBar = {
                 Row(Modifier.padding()) {
